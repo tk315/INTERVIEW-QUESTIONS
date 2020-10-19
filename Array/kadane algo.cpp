@@ -7,10 +7,9 @@ int main()
     int max_sum=INT_MIN,sum=0;
     for(int i=0;i<arr.size();i++)
     {
-        if(sum<0)sum=0;
         sum+=arr[i];
         max_sum=max(sum,max_sum);  
-         
+        if(sum<0)sum=0;
     }
     cout<<max_sum<<endl;
     return 0;
